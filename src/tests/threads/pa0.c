@@ -22,9 +22,9 @@ static void
 change_prio( void *aux UNUSED ){
 	int i;
 	msg("Test thread priority is %d", thread_current()->priority);
-	for(i = 0 ; i < 5; ++i){
+	for(i = 0 ; i < 5; i++){
 		struct thread *t = thread_current();
-		thread_set_priority( (t->priority)-1 );
+		thread_set_priority( (t->priority)-1);
 		msg("Test thread priority is %d", thread_current()->priority);
 	}
 }
